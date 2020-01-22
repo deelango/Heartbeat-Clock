@@ -1,0 +1,24 @@
+//Code written in Arduino IDE
+
+int pin = 6; //initializes the pin that the led will be connected to
+
+void setup() {
+
+}
+
+void loop() {
+  
+  analogWrite(pin,255); // sets the led to high
+  delay(300);
+  analogWrite(pin,25); // sets the led to low
+  delay(300);
+  analogWrite(pin,255); // sets the led to high
+  delay(300);
+  
+  for(int i=255;i<=0;i--){
+  //Fades the led, it will make it look relatistic
+  analogWrite(pin,i);
+  delay(10);
+  
+}
+
